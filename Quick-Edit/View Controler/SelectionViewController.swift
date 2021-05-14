@@ -13,9 +13,18 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
     
     fileprivate var imagepicker = UIImagePickerController()
     
-    fileprivate var foregroundImage: UIImage?
+    fileprivate var isForegroundImage = false
+    
+    fileprivate var foregroundImage: UIImage? = nil
+    fileprivate var backgroundImage: UIImage? = nil
     
     @IBOutlet var SelectForegroundButton: UIButton!
+    @IBOutlet var foregroundImageCheck: UIImageView!
+    
+    @IBOutlet var selectBackgroundButton: UIButton!
+    @IBOutlet var backgroundImageCheck: UIImageView!
+    
+    
     @IBOutlet var nextButton: UIButton!
     
     override func viewDidLoad() {
@@ -28,7 +37,18 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
         
         let image = info[.originalImage] as? UIImage
         
-        foregroundImage = image
+        switch isForegroundImage {
+        case true:
+            foregroundImage = image
+            if foregroundImage != nil {
+                foregroundImageCheck.isHidden = false
+            }
+        default:
+            backgroundImage = image
+            if backgroundImage != nil {
+                backgroundImageCheck.isHidden = false
+            }
+        }
         
         dismiss(animated: true, completion: nil)
     }
@@ -37,7 +57,13 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func selectBackgroundPressed(_ sender: UIButton) {
+        isForegroundImage = false
+        present(imagepicker, animated: true, completion: nil)
+    }
+    
     @IBAction func SelectForegroundPressed(_ sender: UIButton) {
+        isForegroundImage = true
         present(imagepicker, animated: true, completion: nil)
     }
     
