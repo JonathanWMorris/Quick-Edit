@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreML
 import PhotosUI
 
 class SelectionViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
@@ -71,6 +70,7 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
         if segue.identifier == Constants().segues.selectionToFinal {
             let destinationVC = segue.destination as! FinalImageViewController
             destinationVC.foregroundImage = foregroundImage
+            destinationVC.backgroundImage = backgroundImage
         }
     }
 }
