@@ -16,7 +16,8 @@
 		0E0DBE79264E10D100E9414C /* DeepLabV3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DBE78264E10D100E9414C /* DeepLabV3.mlmodel */; };
 		0E0DBE7B264E2EE000E9414C /* FinalImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DBE7A264E2EE000E9414C /* FinalImageViewController.swift */; };
 		0E0DBE7E264E2F7900E9414C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0DBE7D264E2F7900E9414C /* Constants.swift */; };
-		0EF63826264F62AE00CC07B6 /* RemoveBackgroundCoreML_Final.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML_Final.swift */; };
+		0ED859962650920D00127049 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED859952650920D00127049 /* Haptics.swift */; };
+		0EF63826264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift */; };
 		0EF6383B264F636A00CC07B6 /* CoreML+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6382A264F636900CC07B6 /* CoreML+Combine.swift */; };
 		0EF6383C264F636A00CC07B6 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6382B264F636900CC07B6 /* Math.swift */; };
 		0EF6383D264F636A00CC07B6 /* CGImage+RawBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF6382C264F636900CC07B6 /* CGImage+RawBytes.swift */; };
@@ -37,7 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E0DBE61264E10BA00E9414C /* Quick-Edit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick-Edit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E0DBE61264E10BA00E9414C /* Quick Edit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Edit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E0DBE64264E10BA00E9414C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E0DBE66264E10BA00E9414C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0E0DBE68264E10BA00E9414C /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,8 @@
 		0E0DBE78264E10D100E9414C /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		0E0DBE7A264E2EE000E9414C /* FinalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalImageViewController.swift; sourceTree = "<group>"; };
 		0E0DBE7D264E2F7900E9414C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML_Final.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundCoreML_Final.swift; sourceTree = "<group>"; };
+		0ED859952650920D00127049 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundCoreML.swift; sourceTree = "<group>"; };
 		0EF6382A264F636900CC07B6 /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
 		0EF6382B264F636900CC07B6 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		0EF6382C264F636900CC07B6 /* CGImage+RawBytes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+RawBytes.swift"; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		0E0DBE62264E10BA00E9414C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E0DBE61264E10BA00E9414C /* Quick-Edit.app */,
+				0E0DBE61264E10BA00E9414C /* Quick Edit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 			children = (
 				0E0DBE64264E10BA00E9414C /* AppDelegate.swift */,
 				0E0DBE66264E10BA00E9414C /* SceneDelegate.swift */,
+				0ED859952650920D00127049 /* Haptics.swift */,
 				0EF63829264F635600CC07B6 /* CoreMLHelpers */,
 				0E0DBE7F264E2FB400E9414C /* Model */,
 				0E0DBE80264E2FC400E9414C /* View */,
@@ -125,7 +128,7 @@
 			children = (
 				0E0DBE78264E10D100E9414C /* DeepLabV3.mlmodel */,
 				0E0DBE7D264E2F7900E9414C /* Constants.swift */,
-				0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML_Final.swift */,
+				0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,7 +182,7 @@
 			);
 			name = "Quick-Edit";
 			productName = "Quick-Edit";
-			productReference = 0E0DBE61264E10BA00E9414C /* Quick-Edit.app */;
+			productReference = 0E0DBE61264E10BA00E9414C /* Quick Edit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -248,12 +251,13 @@
 				0E0DBE79264E10D100E9414C /* DeepLabV3.mlmodel in Sources */,
 				0EF63841264F636A00CC07B6 /* CVPixelBuffer+Resize.swift in Sources */,
 				0EF63842264F636A00CC07B6 /* Predictions.swift in Sources */,
-				0EF63826264F62AE00CC07B6 /* RemoveBackgroundCoreML_Final.swift in Sources */,
+				0EF63826264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift in Sources */,
 				0E0DBE7E264E2F7900E9414C /* Constants.swift in Sources */,
 				0EF6384A264F636A00CC07B6 /* Array+Extensions.swift in Sources */,
 				0EF6383F264F636A00CC07B6 /* CGImagePropertyOrientation.swift in Sources */,
 				0EF6383E264F636A00CC07B6 /* CVPixelBuffer+Create.swift in Sources */,
 				0EF63846264F636A00CC07B6 /* CVPixelBuffer+Rotate.swift in Sources */,
+				0ED859962650920D00127049 /* Haptics.swift in Sources */,
 				0EF63845264F636A00CC07B6 /* MLMultiArray+Helpers.swift in Sources */,
 				0EF63843264F636A00CC07B6 /* UIImage+Extensions.swift in Sources */,
 			);
@@ -403,14 +407,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "Quick-Edit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.Quick-Edit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Quick Edit";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,14 +428,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "Quick-Edit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.Quick-Edit";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Quick Edit";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,7 +1,3 @@
-// Don't forget to add to the project:
-// 1. DeepLabV3 - https://developer.apple.com/machine-learning/models/
-// 2. CoreMLHelpers - https://github.com/hollance/CoreMLHelpers
-
 import Foundation
 import UIKit
 import CoreML
@@ -107,8 +103,11 @@ extension CIImage {
                 }
             }
         }
-
-        let data = Data(buffer: UnsafeBufferPointer(start: &cubeRGB, count: cubeRGB.count))
+        
+        var data = Data()
+        cubeRGB.withUnsafeBufferPointer { ptr in
+            data = Data(buffer: ptr)
+        }
 
         let colorCubeFilter = CIFilter(
             name: "CIColorCube",

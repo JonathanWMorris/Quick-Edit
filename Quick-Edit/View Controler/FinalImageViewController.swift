@@ -7,45 +7,53 @@
 
 import UIKit
 import CoreML
+import LinkPresentation
 
-class FinalImageViewController: UIViewController {
+class FinalImageViewController: UIViewController, UIActivityItemSource {
     
     @IBOutlet var finalImageView: UIImageView!
-    var foregroundImage: UIImage? = nil
-    var backgroundImage: UIImage? = nil
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     var finalImage:UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        finalImage = foregroundImage?.removeBackground(returnResult: .finalImage)
         
-        let size = foregroundImage!.size
-        
-        UIGraphicsBeginImageContext(size)
-        
-        let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        backgroundImage!.draw(in: areaSize)
-        
-        finalImage!.draw(in: areaSize, blendMode: .normal, alpha: 1)
-        
-        finalImage = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        UIGraphicsEndImageContext()
-        
-        finalImageView.image = finalImage
+        if let finalImage = finalImage {
+            finalImageView.image = finalImage
+        }
     }
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
+        self.activityIndicator.startAnimating()
+        
         // set up activity view controller
-        let imageToShare = [ finalImage! ]
+        let activityViewController = UIActivityViewController(activityItems: [finalImage!, self], applicationActivities: nil)
         
-        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
-        
-        // exclude some activity types from the list (optional)
-        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        // so that iPads won't crash
+        activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.right
+        activityViewController.popoverPresentationController?.sourceView = sender
         
         // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: {
+            self.activityIndicator.stopAnimating()
+        })
+    }
+    
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return ""
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        return nil
+    }
+
+    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
+        let image = finalImage!
+        let imageProvider = NSItemProvider(object: image)
+        let metadata = LPLinkMetadata()
+        metadata.imageProvider = imageProvider
+        metadata.title = "Quick Edit Image"
+        return metadata
     }
 }
