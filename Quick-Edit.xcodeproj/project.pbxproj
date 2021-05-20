@@ -49,6 +49,7 @@
 		0E0DBE78264E10D100E9414C /* DeepLabV3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DeepLabV3.mlmodel; sourceTree = "<group>"; };
 		0E0DBE7A264E2EE000E9414C /* FinalImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalImageViewController.swift; sourceTree = "<group>"; };
 		0E0DBE7D264E2F7900E9414C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E1A49582654175E0017E664 /* Quick Edit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quick Edit.entitlements"; sourceTree = "<group>"; };
 		0ED859952650920D00127049 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		0EF63825264F62AE00CC07B6 /* RemoveBackgroundCoreML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveBackgroundCoreML.swift; sourceTree = "<group>"; };
 		0EF6382A264F636900CC07B6 /* CoreML+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreML+Combine.swift"; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		0E0DBE63264E10BA00E9414C /* Quick-Edit */ = {
 			isa = PBXGroup;
 			children = (
+				0E1A49582654175E0017E664 /* Quick Edit.entitlements */,
 				0E0DBE64264E10BA00E9414C /* AppDelegate.swift */,
 				0E0DBE66264E10BA00E9414C /* SceneDelegate.swift */,
 				0ED859952650920D00127049 /* Haptics.swift */,
@@ -406,8 +408,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick-Edit/Quick Edit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "Quick-Edit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -415,8 +418,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.Quick-Edit";
 				PRODUCT_NAME = "Quick Edit";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,8 +432,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick-Edit/Quick Edit.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 232Q6PF625;
 				INFOPLIST_FILE = "Quick-Edit/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
@@ -436,8 +442,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JonathanMorris.Quick-Edit";
 				PRODUCT_NAME = "Quick Edit";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

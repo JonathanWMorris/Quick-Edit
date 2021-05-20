@@ -28,8 +28,8 @@ fileprivate func metalCompatiblityAttributes() -> [String: Any] {
     String(kCVPixelBufferMetalCompatibilityKey): true,
     String(kCVPixelBufferOpenGLCompatibilityKey): true,
     String(kCVPixelBufferIOSurfacePropertiesKey): [
-      String(kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey): true,
-      String(kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey): true,
+//      String(kCVPixelBufferIOSurfaceOpenGLESTextureCompatibilityKey): true,
+//      String(kCVPixelBufferIOSurfaceOpenGLESFBOCompatibilityKey): true,
       String(kCVPixelBufferIOSurfaceCoreAnimationCompatibilityKey): true
     ]
   ]

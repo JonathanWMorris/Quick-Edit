@@ -43,7 +43,16 @@ class FinalImageViewController: UIViewController, UIActivityItemSource {
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         return ""
     }
+    
+    @IBAction func coppyButtonPressed(_ sender: UIButton) {
+        UIPasteboard.general.image = finalImage
+        let alert = UIAlertController(title: "Image Coppied", message: "The image you created has been coppied to clip board.", preferredStyle: .alert)
 
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
+    }
+    
     func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
         return nil
     }
