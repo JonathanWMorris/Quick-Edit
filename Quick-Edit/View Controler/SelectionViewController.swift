@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import GoogleMobileAds
 
 class SelectionViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -29,12 +30,21 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var nextButton: UIButton!
     
+    var bannerView: GADBannerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagepicker.delegate = self
         selectForegroundButton.layer.cornerRadius = 10
         selectBackgroundButton.layer.cornerRadius = 10
         nextButton.layer.cornerRadius = 5
+        
+        // Setup for the Ad
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-7507216219120305/7218858661"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -122,6 +132,28 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
             self.activityIndicator.stopAnimating()
         }
     }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
+    }
+    
     func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
         
         let cgimage = image.cgImage!
@@ -156,7 +188,7 @@ class SelectionViewController: UIViewController, UIImagePickerControllerDelegate
         
         return image
     }
-
+    
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         self.activityIndicator.startAnimating()
     }

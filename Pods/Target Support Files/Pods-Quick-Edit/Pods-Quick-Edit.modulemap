@@ -1,0 +1,6 @@
+framework module Pods_Quick_Edit {
+  umbrella header "Pods-Quick-Edit-umbrella.h"
+
+  export *
+  module * { export * }
+}

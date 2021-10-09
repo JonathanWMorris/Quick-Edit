@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bXP-NC-XOZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bXP-NC-XOZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -173,55 +174,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZcB-Jk-uRZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
-                            </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2Se-0D-Qw8">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vKG-b3-fx9">
-                                <rect key="frame" x="132" y="796" width="150" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ivk-PI-2yT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUA-Wa-AMI">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="UWS-l9-cIl"/>
-                                            <constraint firstAttribute="height" constant="50" id="l2X-c8-Bfu"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="shareButtonPressed:" destination="Cjf-hC-HmX" eventType="touchUpInside" id="3RW-oE-oTn"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcv-h9-gAE">
-                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="JHR-22-v9y"/>
-                                            <constraint firstAttribute="height" constant="50" id="aJb-Su-4pg"/>
-                                        </constraints>
-                                        <state key="normal">
-                                            <imageReference key="image" image="link.badge.plus" catalog="system" symbolScale="large"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="coppyButtonPressed:" destination="Cjf-hC-HmX" eventType="touchUpInside" id="U5M-Fi-msW"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZcB-Jk-uRZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="712"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vKG-b3-fx9">
+                                        <rect key="frame" x="132" y="762" width="150" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUA-Wa-AMI">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="UWS-l9-cIl"/>
+                                                    <constraint firstAttribute="height" constant="50" id="l2X-c8-Bfu"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="shareButtonPressed:" destination="Cjf-hC-HmX" eventType="touchUpInside" id="3RW-oE-oTn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcv-h9-gAE">
+                                                <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="JHR-22-v9y"/>
+                                                    <constraint firstAttribute="height" constant="50" id="aJb-Su-4pg"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="link.badge.plus" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="coppyButtonPressed:" destination="Cjf-hC-HmX" eventType="touchUpInside" id="U5M-Fi-msW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="2Se-0D-Qw8">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CaC-bq-fHU"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="ZcB-Jk-uRZ" secondAttribute="bottom" constant="150" id="1ej-BF-7bL"/>
-                            <constraint firstItem="ZcB-Jk-uRZ" firstAttribute="leading" secondItem="aQV-lJ-eyj" secondAttribute="leading" id="30n-Th-HAa"/>
-                            <constraint firstAttribute="trailing" secondItem="ZcB-Jk-uRZ" secondAttribute="trailing" id="G3V-hD-ae2"/>
-                            <constraint firstItem="vKG-b3-fx9" firstAttribute="centerX" secondItem="aQV-lJ-eyj" secondAttribute="centerX" id="cSw-o1-v7U"/>
-                            <constraint firstItem="ZcB-Jk-uRZ" firstAttribute="top" secondItem="aQV-lJ-eyj" secondAttribute="top" id="gJ3-ip-inc"/>
-                            <constraint firstItem="vKG-b3-fx9" firstAttribute="top" secondItem="ZcB-Jk-uRZ" secondAttribute="bottom" constant="50" id="sn4-2K-Z7M"/>
-                            <constraint firstItem="2Se-0D-Qw8" firstAttribute="centerX" secondItem="aQV-lJ-eyj" secondAttribute="centerX" id="uxy-XZ-KBL"/>
-                            <constraint firstItem="2Se-0D-Qw8" firstAttribute="centerY" secondItem="aQV-lJ-eyj" secondAttribute="centerY" id="w35-Kf-jgW"/>
+                            <constraint firstItem="CaC-bq-fHU" firstAttribute="bottom" secondItem="Ivk-PI-2yT" secondAttribute="bottom" constant="50" id="JA0-I9-SUb"/>
+                            <constraint firstItem="Ivk-PI-2yT" firstAttribute="top" secondItem="aQV-lJ-eyj" secondAttribute="top" id="hcx-WB-G8V"/>
+                            <constraint firstItem="CaC-bq-fHU" firstAttribute="trailing" secondItem="Ivk-PI-2yT" secondAttribute="trailing" id="hlt-i7-VuR"/>
+                            <constraint firstItem="Ivk-PI-2yT" firstAttribute="leading" secondItem="aQV-lJ-eyj" secondAttribute="leading" id="w98-z9-XON"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pJd-TY-cmd"/>
